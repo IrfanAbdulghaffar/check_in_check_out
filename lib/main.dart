@@ -1,14 +1,16 @@
 import 'package:check_in_check_out/utils/color_constants.dart';
+import 'package:check_in_check_out/utils/helper_functions.dart';
 import 'package:check_in_check_out/utils/shared_pref_instance.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'services/auth_service.dart';
-import 'check_in_check_out_screen.dart';
+import 'screens/home/check_in_check_out_screen.dart';
 import 'firebase_options.dart';
-import 'login_screen.dart';
+import 'screens/auth/login_screen.dart';
 
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -55,6 +57,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     _checkLoginStatus();
   }
+
 
   _checkLoginStatus() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
