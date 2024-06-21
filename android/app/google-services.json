@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "932444280515",
+    "project_id": "check-in-check-out-71f2e",
+    "storage_bucket": "check-in-check-out-71f2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932444280515:android:88fa4f60bd1cf8ba567476",
+        "android_client_info": {
+          "package_name": "com.example.check_in_check_out"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVibOQ5cZCsTFPdsF_B_YeePQxyR0--FI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
