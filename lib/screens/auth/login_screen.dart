@@ -24,28 +24,17 @@ class _LoginScreenState extends State<LoginScreen> {
   String password = '';
   String error = '';
 
-  Future<void> _checkInternetConnectivity() async {
-    var connectivityResult = await (Connectivity().checkConnectivity());
-    if (connectivityResult.contains(ConnectivityResult.none)) {
-      HelperFunctions.showAlert(context: context,heading: "No internet connection",isMessage: true,btnDoneText: "Ok");
-    }
-  }
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    _checkInternetConnectivity();
-    super.initState();
-  }
+
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       body: StreamBuilder(
+        initialData: const [ConnectivityResult.wifi],
         stream: Connectivity().onConnectivityChanged,
         builder: (context, snapshot) {
-          print(snapshot.data);
           if (snapshot.data!.contains(ConnectivityResult.none)) {
             return Column(
               mainAxisAlignment: MainAxisAlignment.end,

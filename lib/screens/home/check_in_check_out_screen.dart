@@ -67,6 +67,7 @@ class _CheckInCheckOutScreenState extends State<CheckInCheckOutScreen> {
         ],
       ),
       body:StreamBuilder(
+        initialData: const [ConnectivityResult.wifi],
         stream: Connectivity().onConnectivityChanged,
         builder: (context, snapshot) {
           print(snapshot.data);
