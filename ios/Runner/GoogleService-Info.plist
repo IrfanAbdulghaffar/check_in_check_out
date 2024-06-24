@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.example.checkInCheckOut</string>
+	<string>com.apexStodio.inOut</string>
 	<key>PROJECT_ID</key>
 	<string>check-in-check-out-71f2e</string>
 	<key>STORAGE_BUCKET</key>

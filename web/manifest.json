@@ -1,6 +1,6 @@
 {
-    "name": "check_in_check_out",
-    "short_name": "check_in_check_out",
+    "name": "In/Out",
+    "short_name": "In/Out",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
