@@ -4,7 +4,6 @@ import 'package:check_in_check_out/services/database_service.dart';
 import 'package:check_in_check_out/utils/color_constants.dart';
 import 'package:check_in_check_out/utils/helper_functions.dart';
 import 'package:connectivity_plus/connectivity_plus.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:lottie/lottie.dart';

@@ -23,7 +23,10 @@ void main() async{
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp( MyApp());
 }
+
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,19 +57,19 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+
   @override
   void initState() {
     super.initState();
     _checkLoginStatus();
   }
 
-
   _checkLoginStatus() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isLoggedIn = prefs.getBool('isLoggedIn') ?? false;
     if (isLoggedIn) {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => CheckInCheckOutScreen()));
+          MaterialPageRoute(builder: (context) => const CheckInCheckOutScreen()));
     } else {
       Navigator.of(context).pushReplacement(
           MaterialPageRoute(builder: (context) => LoginScreen()));
@@ -75,10 +78,11 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: CircularProgressIndicator(),
       ),
     );
   }
+
 }
